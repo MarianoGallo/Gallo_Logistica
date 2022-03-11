@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/34eed7b823.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">s
+    <script defer src="chofer.js"></script>
+    <script defer src="logistica.js"></script>
+    <script src="datos.js"></script>
+    <title>LOG-BOX</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="IMG/LOGO_02.png" alt="logo" width="100px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="id=nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="id=cotizador">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Algo</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>LOG-BOX</h1>
+        <section>
+            <h2 id="institucional">SERVICIOS DE LOGÍSTICA</h2>
+            <article class="institucional">
+                
+                <p class="textoInstitucional">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit, at culpa optio iure debitis rem dolorem esse accusamus. Quaerat facilis repudiandae facere. Illum tenetur voluptatum dignissimos corrupti est enim. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi sunt laudantium ratione, magni suscipit accusantium nam debitis eaque facilis odio voluptas ut minus enim inventore, error eveniet incidunt perferendis dolores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam dolorum minus nobis animi error ut numquam, maxime ipsa nisi culpa exercitationem labore voluptate modi nostrum. Quas, cupiditate aliquid! Repellat?.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ratione beatae et dolorem aut enim. Reiciendis repellat aspernatur rerum ut quae, fugit, odio delectus saepe molestiae cum, maiores quod doloremque.
+                </p>
+            </article>        
+        </section>
+        <h2 id="nosotros">SOBRE NOSOTROS</h2>
+        <h3>Nuestra historia</h3>
+        <div class="nosotros">
+                <p class="textoNosotros">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus expedita recusandae doloribus repudiandae! Placeat similique animi reiciendis libero? Itaque, odit veniam dignissimos nemo placeat commodi consequuntur maiores sit quidem pariatur!</p>
+                <img src="IMG/02.jpg" alt="historia">    
+        </div>
+        <div>
+        <h2 id="cotizador">SERVICIOS</h2>
+        <section class="cotizador">
+            <h3>Cotizar viaje</h3>
+            <!--nombre y apellido-->
+                <div id="usuario" class="input-group">
+                    <span class="input-group-text">Ingresar nombre completo</span>
+                    <input id="usuarioNombre" type="text" aria-label="First name" class="form-control"> 
+                </div>
+            <!--cuit-->
+                <div class="input-group">
+                    <span class="input-group-text">Ingresar CUIT (Número de 11 dígitos sin -)</span>
+                    <input id="usuarioCuit" type="number" aria-label="First name" class="form-control">    
+                </div>
+            <!--opciones de viaje (flete, cadeteria)--> 
+            <div id="tipoServicio" class="viajes">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="datosDiseñador">
+                <i class="fas fa-copyright"></i>copyright 2022 - MAG Diseño Integral<br>
+                <i class="fas fa-envelope"></i><a href="mailto:mag.dis.ind@gmail.com">mag.dis.ind@gmail.com<a></i>
+                <i class="fas fa-mobile-alt"></i>+54 9 3512349277
+            </div>
+            <div class="linksRedes">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram-square fa-fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter-square fa-fa-twitter fa-2x"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube-square fa-fa-youtube fa-2x"></i></a>
+            </div>
+    </footer>
+
+
+<!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
