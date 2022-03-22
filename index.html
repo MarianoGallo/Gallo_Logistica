@@ -10,8 +10,8 @@
     <script src="https://kit.fontawesome.com/34eed7b823.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">s
     <script defer src="chofer.js"></script>
+    <script src="vehiculo.js"></script>
     <script defer src="logistica.js"></script>
-    <script src="datos.js"></script>
     <title>LOG-BOX</title>
 </head>
 <body>
@@ -54,26 +54,54 @@
         <h3>Nuestra historia</h3>
         <div class="nosotros">
                 <p class="textoNosotros">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus expedita recusandae doloribus repudiandae! Placeat similique animi reiciendis libero? Itaque, odit veniam dignissimos nemo placeat commodi consequuntur maiores sit quidem pariatur!</p>
-                <img src="IMG/02.jpg" alt="historia">    
+                <img src="IMG/02.jpg" alt="historia" width="500px">    
         </div>
         <div>
-        <h2 id="cotizador">SERVICIOS</h2>
+        <h2 id="servicios">SERVICIOS</h2>
         <section class="cotizador">
             <h3>Cotizar viaje</h3>
             <!--nombre y apellido-->
-                <div id="usuario" class="input-group">
-                    <span class="input-group-text">Ingresar nombre completo</span>
-                    <input id="usuarioNombre" type="text" aria-label="First name" class="form-control"> 
-                </div>
-            <!--cuit-->
-                <div class="input-group">
-                    <span class="input-group-text">Ingresar CUIT (Número de 11 dígitos sin -)</span>
-                    <input id="usuarioCuit" type="number" aria-label="First name" class="form-control">    
-                </div>
-            <!--opciones de viaje (flete, cadeteria)--> 
-            <div id="tipoServicio" class="viajes">
-                
+            <div id="usuariNombre" class="input-group">
+                <label>Ingresar nombre completo</label>
+                <input id="inputUsuarioNombre" type="text" aria-label="First name" class="form-control"> 
             </div>
+            <!--cuit-->
+            <div id="usuarioCuit" class="input-group">
+                <label>Ingresar CUIT (Número de 11 dígitos sin -)</label>
+                <input id="inputUsuarioCuit" type="number" aria-label="First name" class="form-control">    
+            </div>
+            <!--fecha-->
+            <div id="fechaViaje" class="input-group">
+                <label>Ingresar fecha</label>
+                <input id="inputFechaViaje" type="date" aria-label="First name" class="form-control" value="">    
+            </div>
+            <!--punto de partida y de llegada-->
+            <div id="recorrido" class="input-group">
+                <label>Ingresar punto de partida</label>
+                <input id="puntoPartida" type="number" class="form-control">    
+                <label>Ingresar punto de llegada</label>
+                <input id="puntoLlegada" type="number" class="form-control">    
+            </div>
+            <!--opciones de viaje (flete, cadeteria)--> 
+            <form id="tipoServicio" class="viajes">
+                <legend><span>Seleccione el servicio</span></legend>`
+                <label for="cadeteria">cadeteria</label>
+                    <input type="radio" name="viaje" value="cadeteria" id="cadeteria" class="opciones">
+                <br>
+                <label for="flete">flete</label>
+                    <input type="radio" name="viaje" value="flete" id="flete" class="opciones">
+                <br>    
+                <label for="cargasPesadas">cargas pesadas</label>
+                    <input type="radio" name="viaje" value="cargasPesadas" id="cargasPesadas" class="opciones">
+                <br>    
+                <label for="mudanza">mudanza</label>
+                    <input type="radio" name="viaje" value="mudanza" id="mudanza" class="opciones">
+            </form>
+            <div>
+                <button id="btn-limpiar" type="reset" class="btnLimpiar">LIMPIAR</button>
+                <button id="btn-calcular" type= "button" class= "btnLCalcular">CALCULAR</button>
+                <button id="btn-cargar" type="submit" class="btnCargar">CARGAR</button>
+            </div>>
         </section>
     </main>
     <footer>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="dom.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>prueba DOM</h1>
+    <div id="usuario-nombre" class="input-group">
+        <label id="etiqueta">Ingresar nombre completo</label>
+        <input id="usuarioNombre" type="text" aria-label="First name" class="form-control" value="nombre y apellido"> 
+    </div>
+    
+    <div id="usuario-dni" class="input-group">
+        <label>Ingresar DNI</label>
+        <input id="usuarioDni" type="number" aria-label="First name" class="form-control" value="">    
+    </div>
+
+    <div id="fecha-viaje" class="input-group">
+        <label>Ingresar fecha</label>
+        <input id="fechaViaje" type="date" aria-label="First name" class="form-control" value="">    
+    </div>
+
+    <label for="opcion1" class="radiOps">
+        <label for="">1</label>
+        <input type="radio" name= "opcionn" id="op-1" class="opciones" value="opcion1"> 
+        <label for="">2</label> 
+        <input type="radio" name= "opcionn" id="op-2" class="opciones" value="opcion2">
+        <label for="">3</label>
+        <input type="radio" name= "opcionn" id="op-3" class="opciones" value="opcion3">
+        <label for="">4</label>
+        <input type="radio" name= "opcionn" id="op-4" class="opciones" value="opcion4">
+    </label>
+
+    <div id="calculo">
+    </div>
+
+    <div>
+        <button id="btn-limpiar" type="reset" class="btnLimpiar">LIMPIAR</button>
+        <button id="btn-calcular" type= "button" class= "btnLCalcular">CALCULAR</button>
+        <button id="btn-cargar" type="submit" class="btnCargar">CARGAR</button>
+    </div>
+
+</body>
+</html>
