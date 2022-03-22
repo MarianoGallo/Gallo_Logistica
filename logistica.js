@@ -38,9 +38,9 @@ function programarBtnCalcular() {
 }
 
 function calcularDistancia(){
-    const inputPuntoA = document.querySelector("#puntoPartida")
+    const inputPuntoA = document.querySelector("#puntoPartida");
         //console.log(inputPuntoA.value)
-    const inputPuntoB = document.querySelector("#puntoLlegada")
+    const inputPuntoB = document.querySelector("#puntoLlegada");
         //console.log(inputPuntoB.value)
     const distancia = inputPuntoB.value - inputPuntoA.value;
     
@@ -88,16 +88,25 @@ function elegirServicio(){
 
 //--------------------------------------------------------------------------------------
 function programarBtnLimpiar() {
+    /*let inputNombre = document.getElementById("inputUsuarioNombre");
+    const inputCuit = document.querySelector("#inputUsuarioCuit");
+    const inputPuntoA = document.querySelector("#puntoPartida");
+    const inputPuntoB = document.querySelector("#puntoLlegada");
+    */
     const btnLimpiar = document.querySelector("#btn-limpiar")
     btnLimpiar.onclick = ()=>{
-    
+        
     }
 }
 //--------------------------------------------------------------------------------------
 function programarBtnCargar() {
     const btnCargar = document.querySelector("#btn-cargar")
-    btnCargar.onclick = ()=>{
-    alert("PROGRAMA BTN CARGAR");
+    btnCargar.onclick = ()=>
+    {
+        document.getElementById("inputUsuarioNombre").value = "";
+        document.querySelector("#inputUsuarioCuit").value = "";
+        document.querySelector("#puntoPartida").value = "";
+        document.querySelector("#puntoLlegada").value = "";
     }
 }
 
