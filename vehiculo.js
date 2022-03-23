@@ -29,3 +29,12 @@ for(const vehiculo of vehiculos){
     console.log(vehiculo.tipo + " " + vehiculo.marca + " " + vehiculo.modelo)
 }
 */
+
+let [ , , vehiculo:{marca} ] = vehiculos;
+
+console.log(marca);
+
+/*let [ , , {vehiculo: tipo, marca} ] = vehiculos;
+console.log(tipo);
+console.log(marca);
+*/

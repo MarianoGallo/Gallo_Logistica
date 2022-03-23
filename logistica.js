@@ -30,11 +30,17 @@ function programarBtnCalcular() {
     const btnCalcular = document.querySelector("#btn-calcular");
     btnCalcular.addEventListener("click", ()=>{
         console.log(inputNombre.value)
+        
         formularioValido = validarCuit();
         if (formularioValido)
+        
         calcularDistancia();
-        elegirServicio();
-    })
+
+         //elegirServicio();
+        const radioVal = document.querySelector('input[name="viaje"]:checked').value;
+            console.log(radioVal);
+        });
+    
 }
 
 function calcularDistancia(){
@@ -52,50 +58,47 @@ function calcularDistancia(){
 function validarCuit(){
     const inputCuit = document.querySelector("#inputUsuarioCuit")
     
-        if(inputCuit.value.length !== 11){
+    /*    if(inputCuit.value.length !== 11){
         
             alert("vuelva a ingresar un numero") 
             inputCuit.focus();
             return false;
         }
-        console.log("CUIT " + inputCuit.value + " se registró correctamente");
-        return true;
+
+        else{
+            console.log("CUIT " + inputCuit.value + " se registró correctamente");
+        ;
+        }
+    */
+        inputCuit.value.length !== 11 ? alert("vuelva a ingresar un numero") 
+        //inputCuit.focus() 
+        //return false 
+        : console.log("CUIT " + inputCuit.value + " se registró correctamente") 
+        return true
 }
 
 function elegirServicio(){
-    
-    let opcionCadeteria = document.querySelector('#cadeteria');
-    let opcionFlete = document.querySelector('#flete');
-    let opcionCargasPesadas = document.querySelector('#cargasPesadas');
-    let opcionMudanza = document.querySelector('#mudanza');
-    
-    const servicio = document.querySelector("#tipoServicio");
-    servicio.addEventListener("change", ()=>{
-        if (opcionCadeteria.checked) {
-            console.log("La opcion seleccionada es: " + opcionCadeteria.value);
-        } 
-        else if(opcionFlete.checked){
-            console.log("La opcion seleccionada es: " + opcionFlete.value)
-        }
-        else if(opcionCargasPesadas.checked){
-            console.log("La opcion seleccionada es: " + opcionCargasPesadas.value)
-        }
-        else if(opcionMudanza.checked){
-            console.log("La opcion seleccionada es: " + opcionMudanza.value)
-        }
-    })
+    const btn = document.querySelector("#btn-calcular");
+
+    btn.addEventListener("click", () => {
+    const radioVal = document.querySelector('input[name="viaje"]:checked').value;
+
+    console.log(radioVal);
+});
 }
+
+
 
 //--------------------------------------------------------------------------------------
 function programarBtnLimpiar() {
-    /*let inputNombre = document.getElementById("inputUsuarioNombre");
-    const inputCuit = document.querySelector("#inputUsuarioCuit");
-    const inputPuntoA = document.querySelector("#puntoPartida");
-    const inputPuntoB = document.querySelector("#puntoLlegada");
-    */
+    
     const btnLimpiar = document.querySelector("#btn-limpiar")
+
     btnLimpiar.onclick = ()=>{
-        
+        document.getElementById("inputUsuarioNombre").value = "";
+        document.querySelector("#inputUsuarioCuit").value = "";
+        document.querySelector("#puntoPartida").value = "";
+        document.querySelector("#puntoLlegada").value = "";
     }
 }
 //--------------------------------------------------------------------------------------
@@ -103,10 +106,7 @@ function programarBtnCargar() {
     const btnCargar = document.querySelector("#btn-cargar")
     btnCargar.onclick = ()=>
     {
-        document.getElementById("inputUsuarioNombre").value = "";
-        document.querySelector("#inputUsuarioCuit").value = "";
-        document.querySelector("#puntoPartida").value = "";
-        document.querySelector("#puntoLlegada").value = "";
+        alert("PRueba CArgar")
     }
 }
 
@@ -167,5 +167,5 @@ for (let i = 0; i < vehiculos.length; i++) {
 //    Para los vehículos utilitarios mostrar los nombres de los choferes con licencia B2.-
 //    Para el vehículo camion mostrar los nombres de los choferes con licencia C3.-
 
-//const servicios = document.getElementById("tipoServicio")
+//const servicios = document.getElementById('tipoServicio')
 //servicios.innerHTML = `<label><span>Seleccione el servicio</span></label>` 
