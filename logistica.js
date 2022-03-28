@@ -19,6 +19,7 @@ programarBtnCargar();
 
 
 
+
 let inputNombre = document.getElementById("inputUsuarioNombre");
 //inputNombre.addEventListener("change", ()=>{console.log(inputNombre.value)});
 //let inputCuit = document.getElementById("inputUsuarioCuit");
@@ -29,6 +30,7 @@ function programarBtnCalcular() {
     let formularioValido = false;
     const btnCalcular = document.querySelector("#btn-calcular");
     btnCalcular.addEventListener("click", ()=>{
+        
         console.log(inputNombre.value)
         
         formularioValido = validarCuit();
@@ -41,51 +43,37 @@ function programarBtnCalcular() {
             console.log(radioVal);
         });
     
+        
 }
 
 function calcularDistancia(){
+    
     const inputPuntoA = document.querySelector("#puntoPartida");
         //console.log(inputPuntoA.value)
     const inputPuntoB = document.querySelector("#puntoLlegada");
         //console.log(inputPuntoB.value)
-    const distancia = inputPuntoB.value - inputPuntoA.value;
     
-    console.log("La distancia del recorrido es: " + distancia + "km");
+        const distancia = inputPuntoB.value - inputPuntoA.value;
     return distancia;
+    //console.log("La distancia del recorrido es: " + distancia + "km");
+    
+    
 }
 
 
 function validarCuit(){
     const inputCuit = document.querySelector("#inputUsuarioCuit")
     
-    /*    if(inputCuit.value.length !== 11){
-        
-            alert("vuelva a ingresar un numero") 
-            inputCuit.focus();
-            return false;
-        }
-
-        else{
-            console.log("CUIT " + inputCuit.value + " se registró correctamente");
-        ;
-        }
-    */
-        inputCuit.value.length !== 11 ? alert("vuelva a ingresar un numero") 
-        //inputCuit.focus() 
-        //return false 
+        inputCuit.value.length !== 11 ?  Swal.fire({
+            title: "Error",
+            text: "Reingrese un numero de 11 degitos.",
+            icon: "error",
+            background: "#ffcc00", 
+        })
         : console.log("CUIT " + inputCuit.value + " se registró correctamente") 
         return true
 }
 
-function elegirServicio(){
-    const btn = document.querySelector("#btn-calcular");
-
-    btn.addEventListener("click", () => {
-    const radioVal = document.querySelector('input[name="viaje"]:checked').value;
-
-    console.log(radioVal);
-});
-}
 
 
 
@@ -109,10 +97,11 @@ function programarBtnCargar() {
         alert("PRueba CArgar")
     }
 }
+//--------------------------------------------------------------------------------------
+/*function persistirDatos(){
+    localStorage.setItem("movil", vehiculo)
+}
 
-
-
-/*
 const servicio = prompt("Ingrese el tipo de servivcio: cadeteria | flete | cargasPesadas| mudanza");
 switch (servicio) {
     case "cadeteria":{

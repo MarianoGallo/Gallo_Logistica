@@ -30,11 +30,30 @@ for(const vehiculo of vehiculos){
 }
 */
 
-let [ , , vehiculo:{marca} ] = vehiculos;
+//let [ , , vehiculo:{marca} ] = vehiculos;
 
-console.log(marca);
+//console.log(marca);
 
 /*let [ , , {vehiculo: tipo, marca} ] = vehiculos;
 console.log(tipo);
 console.log(marca);
+*/
+
+/*Storage JSON-----------------------------------------------------------------------------
+
+//localStorage.setItem("log-box", JSON.stringify(vehiculos));
+//sessionStorage.setItem("logBox", "moviles");
+
+let guardadoLocal =  (movil, valor) => {localStorage.getItem(movil, valor)}; 
+
+//for(const vehiculo of vehiculos)
+//   guardadoLocal("ListaMoviles", JSON.stringify(vehiculo));
+
+console.log(guardadoLocal);
+
+
+
+let descargaLocal = JSON.parse(localStorage.getItem(guardadoLocal));
+
+console.log(typeof descargaLocal)
 */
