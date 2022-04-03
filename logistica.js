@@ -18,8 +18,6 @@ programarBtnLimpiar();
 programarBtnCargar();
 
 
-
-
 let inputNombre = document.getElementById("inputUsuarioNombre");
 //inputNombre.addEventListener("change", ()=>{console.log(inputNombre.value)});
 //let inputCuit = document.getElementById("inputUsuarioCuit");
@@ -43,7 +41,11 @@ function programarBtnCalcular() {
             console.log(radioVal);
         });
     
-        
+/*        Toastify({
+            text: "La distancia es" + distancia,
+            duration: 5000,
+        }).showToast();
+*/
 }
 
 function calcularDistancia(){
@@ -73,10 +75,6 @@ function validarCuit(){
         : console.log("CUIT " + inputCuit.value + " se registró correctamente") 
         return true
 }
-
-
-
-
 //--------------------------------------------------------------------------------------
 function programarBtnLimpiar() {
     
@@ -158,3 +156,19 @@ for (let i = 0; i < vehiculos.length; i++) {
 
 //const servicios = document.getElementById('tipoServicio')
 //servicios.innerHTML = `<label><span>Seleccione el servicio</span></label>` 
+
+
+//Desafio Fetch en tu proyecto
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'google-maps-geocoding-plus.p.rapidapi.com',
+		'X-RapidAPI-Key': '06f11d29a5mshb71aff10fff6c9bp14f075jsn17c7c1d1c223'
+	}
+};
+
+fetch('https://google-maps-geocoding-plus.p.rapidapi.com/geocode?address=121%20Buffalo%20View%20Ln%2C%20Georgetown%2C%20TX%2078628&language=en', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));

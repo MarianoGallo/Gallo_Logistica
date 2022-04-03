@@ -30,14 +30,14 @@ for(const vehiculo of vehiculos){
 }
 */
 
-//let [ , , vehiculo:{marca} ] = vehiculos;
 
-//console.log(marca);
 
-/*let [ , , {vehiculo: tipo, marca} ] = vehiculos;
+//Desestrucruracion de objetos y arrays---------------------------------------------------
+
+let [ , , {vehiculo: tipo, marca} ] = vehiculos;
 console.log(tipo);
 console.log(marca);
-*/
+
 
 /*Storage JSON-----------------------------------------------------------------------------
 

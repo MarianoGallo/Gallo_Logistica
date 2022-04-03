@@ -12,6 +12,7 @@
     <script defer src="chofer.js"></script>
     <script src="vehiculo.js"></script>
     <script defer src="logistica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <title>LOG-BOX</title>
 </head>
@@ -81,7 +82,12 @@
                 <label>Ingresar punto de partida</label>
                 <input id="puntoPartida" type="number" class="form-control">    
                 <label>Ingresar punto de llegada</label>
-                <input id="puntoLlegada" type="number" class="form-control">    
+                <input id="puntoLlegada" type="number" class="form-control">       
+            </div>
+            <!--mapa-->
+            <div id="mapa">
+                
+            </div>
             </div>
             <!--opciones de viaje (flete, cadeteria)--> 
             <form id="tipoServicio" class="viajes">
