@@ -1,0 +1,81 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="mapa_api.css">
+    <script defer src="mapa_api.js"></script>
+    <title>MAPA API</title>
+</head>
+
+<body>
+    <h2>PRUEBA DE MAPA Y API GOOGLE MAPS</h2>
+    <div id="mapa">
+        <form id="distancia">
+            <div id="partida" class="form-group">
+                <label for="origen">Punto de inicio</label>
+                <input id="puntoInicio" class="form-control" placeholder="Ingrese una direccion">
+                <input id="origen" type="hidden" name="origen" required>
+            </div>
+
+            <div id="arribo" class="form-group">
+                <label for="destino">Punto de destino</label>
+                <input id="puntoLlegada" class="form-control" placeholder="Ingrese una direccion">
+                <input id="destino" type="hidden" name="destino" required>
+            </div>
+
+            <input type="submit" value="calcular" class="btn btn-primary">
+        </form>
+    </div>
+
+    <div id="resultado">
+        <ul class="list-group"></ul>
+            <li class="list-group-item">Distancia en km<span id="distanciaKm" class="badge badge-primary badge-pill"></span></li>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyKSFLF5rBpvI8F5NcTK1NeBXDAMabuz0&callback=initMap&v=weekly" async></script>
+</body>
+<body>
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+        <h3 style="flex-grow: 0">Request</h3>
+        <pre style="flex-grow: 1" id="request"></pre>
+        <h3 style="flex-grow: 0">Response</h3>
+        <pre style="flex-grow: 1" id="response"></pre>
+        </div>
+    </div>
+
+    <Async script executes immediately and must be after any DOM elements used in callback.>
+    
+</body>
+</html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Distance Matrix Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="mapa_api.css" />
+    <script src="mapa_api.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar">
+        <h3 style="flex-grow: 0">Request</h3>
+        <pre style="flex-grow: 1" id="request"></pre>
+        <h3 style="flex-grow: 0">Response</h3>
+        <pre style="flex-grow: 1" id="response"></pre>
+      </div>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyKSFLF5rBpvI8F5NcTK1NeBXDAMabuz0&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

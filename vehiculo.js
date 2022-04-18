@@ -22,22 +22,33 @@ vehiculos.push(new Vehiculo(0017, "furgon", "Mercedes Benz", "Sprint", 2019, "AD
 vehiculos.push(new Vehiculo(0012, "camion", "Iveco", "Tector 90-190", 2015, "AD045CG"));
 vehiculos.push(new Vehiculo(0034, "utilitario", "Fiat", "Fiorino", 2018, "AE768RD"));
 vehiculos.push(new Vehiculo(0045, "utilitario", "Fiat", "Fiorino", 2018, "AY553KD"));
+vehiculos.push(new Vehiculo(0033, "motocicleta", "Yamaha", "YBR 125", 2017, "A065WOP"));
 
-//console.log(vehiculos.tipo);
 /*
-for(const vehiculo of vehiculos){
-    console.log(vehiculo.tipo + " " + vehiculo.marca + " " + vehiculo.modelo)
-}
+const motocicletas = vehiculos.filter(vehiculo => vehiculo.tipo === "motocicleta");
+    //console.table(motocicletas);
+    let motoAsignado = Math.floor(Math.random()*motocicletas.length);
+    let motoAleatorio = motocicletas[motoAsignado];
+        console.log("movil moto: " + motoAleatorio.marca + " " + motoAleatorio.modelo + " patente:" + motoAleatorio.patente)
+
+const utilitarios = vehiculos.filter(vehiculo => vehiculo.tipo === "utilitario");
+//console.table(motocicletas);
+let utiAsignado = Math.floor(Math.random()*utilitarios.length);
+let utiAleatorio = utilitarios[utiAsignado];
+    console.log("movil utilitario: " + utiAleatorio.marca + " " + utiAleatorio.modelo + " patente:" + utiAleatorio.patente)
+
+const furgon = vehiculos.filter(vehiculo => vehiculo.tipo === "furgon");
+    let furAsignado = Math.floor(Math.random()*furgon.length);
+    let furAleatorio = furgon[furAsignado];
+        console.log("movil furgon: " + furAleatorio.marca + " " + furAleatorio.modelo + " patente:" + furAleatorio.patente)
+
+const camion = vehiculos.filter(vehiculo => vehiculo.tipo === "camion");
+    //console.table(motocicletas);
+    let camAsignado = Math.floor(Math.random()*camion.length);
+    let camAleatorio = camion[camAsignado];
+        console.log("movil camion: " + camAleatorio.marca + " " + camAleatorio.modelo + " patente:" + camAleatorio.patente)
+
 */
-
-
-
-//Desestrucruracion de objetos y arrays---------------------------------------------------
-
-let [ , , {vehiculo: tipo, marca} ] = vehiculos;
-console.log(tipo);
-console.log(marca);
-
 
 /*Storage JSON-----------------------------------------------------------------------------
 

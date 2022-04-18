@@ -60,7 +60,7 @@ h3{
 
 .cotizador{
     background-color: #ffcc00;
-    width:  70%;
+    width:  100%;
 }
 
 /*FOOTER*/
@@ -83,4 +83,13 @@ footer{
 }
 p{
     background-color: #ffcc00;
+}
+#mapa{
+    height: 400px;
+    width: 100%;
+    border: 5px;
+}
+
+.btn{
+    background-color: aquamarine;
 }

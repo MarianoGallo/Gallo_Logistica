@@ -25,6 +25,7 @@ let inputNombre = document.getElementById("inputUsuarioNombre");
 
 
 function programarBtnCalcular() {
+    
     let formularioValido = false;
     const btnCalcular = document.querySelector("#btn-calcular");
     btnCalcular.addEventListener("click", ()=>{
@@ -36,32 +37,28 @@ function programarBtnCalcular() {
         
         calcularDistancia();
 
-         //elegirServicio();
+        /*elegirServicio();
         const radioVal = document.querySelector('input[name="viaje"]:checked').value;
             console.log(radioVal);
         });
-    
-/*        Toastify({
-            text: "La distancia es" + distancia,
-            duration: 5000,
-        }).showToast();
-*/
+        */
+
 }
 
-function calcularDistancia(){
+/*function calcularDistancia(){
     
     const inputPuntoA = document.querySelector("#puntoPartida");
         //console.log(inputPuntoA.value)
     const inputPuntoB = document.querySelector("#puntoLlegada");
         //console.log(inputPuntoB.value)
     
-        const distancia = inputPuntoB.value - inputPuntoA.value;
-    return distancia;
+    const distancia = inputPuntoB.value - inputPuntoA.value;
+        return distancia;
     //console.log("La distancia del recorrido es: " + distancia + "km");
     
     
 }
-
+*/
 
 function validarCuit(){
     const inputCuit = document.querySelector("#inputUsuarioCuit")
@@ -96,36 +93,38 @@ function programarBtnCargar() {
     }
 }
 //--------------------------------------------------------------------------------------
-/*function persistirDatos(){
-    localStorage.setItem("movil", vehiculo)
-}
 
-const servicio = prompt("Ingrese el tipo de servivcio: cadeteria | flete | cargasPesadas| mudanza");
-switch (servicio) {
-    case "cadeteria":{
-        console.log("Cadeteria, costo: $" + calcularDistancia() * 100);
-    }
-    break;
-    case "flete":{
-        console.log("Flete, costo: $" +calcularDistancia() * 300);
-    }
-    break;
-    case "cargasPesadas":{
-        console.log("Cargas pesadas, costo: $" +calcularDistancia() * 1500);
-    }
-    break;
-    case "mudanza":{
-        let tiempo  = prompt("Ingrese el tiempo que va a necesitar")
-        console.log("Mudanza, costo: $" + tiempo * 400);
-    }
-    break;
+function elegirServicio(){
 
-    default:
-        alert("Servicio no disponible.")
+    //const servicio = prompt("Ingrese el tipo de servivcio: cadeteria | flete | cargasPesadas| mudanza");
+    const servicio = document.querySelector('input[name="viaje"]:checked').value;
+            //console.log(radioVal);
+
+        switch (servicio) {
+            
+            case "cadeteria":{
+                
+            }
         break;
-}
+            case "flete":{
+                
+            }
+        break;
+            case "cargasPesadas":{
+                
+        }
+        break;
+            case "mudanza":{
+                
+        }
+        break;
 
-Desafío: Incorporar Arrays
+        default:{
+            alert("Servicio no disponible.")  
+        } 
+        break;  
+}
+/*Desafío: Incorporar Arrays
 const vehiculos = ["motocicleta", "utilitario chico", "utilitario grande", "camion"];
 for (let i = 0; i < vehiculos.length; i++) {
 //    console.log(vehiculos[i]);
@@ -156,19 +155,3 @@ for (let i = 0; i < vehiculos.length; i++) {
 
 //const servicios = document.getElementById('tipoServicio')
 //servicios.innerHTML = `<label><span>Seleccione el servicio</span></label>` 
-
-
-//Desafio Fetch en tu proyecto
-
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Host': 'google-maps-geocoding-plus.p.rapidapi.com',
-		'X-RapidAPI-Key': '06f11d29a5mshb71aff10fff6c9bp14f075jsn17c7c1d1c223'
-	}
-};
-
-fetch('https://google-maps-geocoding-plus.p.rapidapi.com/geocode?address=121%20Buffalo%20View%20Ln%2C%20Georgetown%2C%20TX%2078628&language=en', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
